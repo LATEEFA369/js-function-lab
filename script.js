@@ -144,7 +144,7 @@ function convertTemperature(temperature, scale) {
     return (temperature * 1.8) + 32;
   } else if (scale === 'F') {
    
-    return (temperature - 32) * 1.8;
+    return (temperature - 32) / 1.8;
   } 
 }
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
@@ -203,13 +203,13 @@ Example: calculateGrade(100) should return A.
 Complete the exercise in the space below:
 */
  function calculateGrade(grade){
-  if(grade > 89){
+  if(grade >= 90){
     return 'A';
-  } else  if(grade <89 && grade > 79){
+  } else  if(grade <= 89 && grade >= 80){
     return 'B';
-  } else  if(grade <79 && grade > 69){
+  } else  if(grade <=79 && grade >= 70){
     return 'C';
-  } else if(grade <69 && grade > 59){
+  } else if(grade <= 69 && grade >= 60){
     return 'D';
   } else if(grade < 60 ){
     return 'F';
